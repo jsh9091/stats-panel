@@ -86,16 +86,16 @@
 }
 
 #stepsIcon {
-  x: "160";
-  y: "30";
-  width: "35";
+  x: "163";
+  y: "28";
+  width: "20";
   height: "25";
   fill: black; 
   opacity: 1;
 }
 
 #stepCountLabel {
-  x: "200";
+  x: "190";
   y: "50";
   font-size: 30;
   font-family: System-Bold;
