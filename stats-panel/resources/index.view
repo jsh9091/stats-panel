@@ -27,5 +27,9 @@
   <text id="hourLabel" />
   <text id="minuteLabel" />
 
+  <text id="dayOfWeekLabel" />
+  <text id="monthLabel" />
+  <text id="yearLabel" />
+
   <rect x="155" y="20" width="140" height="295" fill="green" id="status-panel" />
 </svg>

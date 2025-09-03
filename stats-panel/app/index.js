@@ -32,6 +32,9 @@ clock.granularity = "minutes";
 // Get a handle on the <text> elements
 const minuteLabel = document.getElementById("minuteLabel");
 const hourLabel = document.getElementById("hourLabel");
+const dayOfWeekLabel = document.getElementById("dayOfWeekLabel");
+const monthLabel = document.getElementById("monthLabel");
+const yearLabel = document.getElementById("yearLabel");
 
 /**
  * Update the display of clock values.
@@ -39,28 +42,32 @@ const hourLabel = document.getElementById("hourLabel");
  */
 clock.ontick = (evt) => {
 
-  // get time information from API
-  let todayDate = evt.date;
-  let rawHours = todayDate.getHours();
-  let mins = todayDate.getMinutes();
-  let displayMins = zeroPad(mins);
+    // get time information from API
+    let todayDate = evt.date;
+    let rawHours = todayDate.getHours();
+    let mins = todayDate.getMinutes();
+    let displayMins = zeroPad(mins);
 
-  let hours;
-  if (preferences.clockDisplay === "12h") {
-    // 12 hour format
-    hours = rawHours % 12 || 12;
-  } else {
-    // 24 hour format
-    if (rawHours > 9) {
-      hours = zeroPad(rawHours);
+    let hours;
+    if (preferences.clockDisplay === "12h") {
+        // 12 hour format
+        hours = rawHours % 12 || 12;
     } else {
-      hours = rawHours;
+        // 24 hour format
+        if (rawHours > 9) {
+            hours = zeroPad(rawHours);
+        } else {
+            hours = rawHours;
+        }
     }
-  }
 
-  // display time on main clock
-  hourLabel.text = `${hours}`;
-  minuteLabel.text = `${displayMins}`;
+    // display time on main clock
+    hourLabel.text = `${hours}`;
+    minuteLabel.text = `${displayMins}`;
+
+    updateDayField(evt);
+    updateDateFields
+    (evt);
 }
 
 /**
@@ -69,8 +76,47 @@ clock.ontick = (evt) => {
  * @returns 
  */
 function zeroPad(i) {
-  if (i < 10) {
-    i = "0" + i;
-  }
-  return i;
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
+}
+
+/**
+ * Updates day of week displayed. 
+ * @param {*} evt 
+ */
+function updateDayField(evt) {
+    const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    let index = evt.date.getDay();
+    dayOfWeekLabel.text = dayNames[index];
+}
+
+/**
+ * Updates the month and year fields.
+ * @param {*} evt 
+ */
+function updateDateFields(evt) {
+  const monthNames = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+
+  let month = monthNames[evt.date.getMonth()];
+  let dayOfMonth = evt.date.getDate();
+  let year = evt.date.getUTCFullYear();
+
+  monthLabel.text = `${month}` + " " + `${dayOfMonth}`;
+  yearLabel.text = `${year}`;
+
 }
