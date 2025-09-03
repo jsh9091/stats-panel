@@ -25,6 +25,8 @@
 import clock from "clock";
 import * as document from "document";
 import { preferences } from "user-settings";
+import { today as activity } from "user-activity";
+import { me as appbit } from "appbit";
 
 // Update the clock every second
 clock.granularity = "minutes";
@@ -35,6 +37,7 @@ const hourLabel = document.getElementById("hourLabel");
 const dayOfWeekLabel = document.getElementById("dayOfWeekLabel");
 const monthLabel = document.getElementById("monthLabel");
 const yearLabel = document.getElementById("yearLabel");
+const stepCountLabel = document.getElementById("stepCountLabel");
 
 /**
  * Update the display of clock values.
@@ -66,8 +69,8 @@ clock.ontick = (evt) => {
     minuteLabel.text = `${displayMins}`;
 
     updateDayField(evt);
-    updateDateFields
-    (evt);
+    updateDateFields(evt);
+    updateSteps();
 }
 
 /**
@@ -118,5 +121,31 @@ function updateDateFields(evt) {
 
   monthLabel.text = `${month}` + " " + `${dayOfMonth}`;
   yearLabel.text = `${year}`;
+}
 
+/**
+ * Updates steps count label.
+ */
+function updateSteps() {
+    // handle case of user permission for step counts is not there
+    if (appbit.permissions.granted("access_activity")) {
+        stepCountLabel.text = getSteps().formatted;
+    } else {
+        stepCountLabel.text = "-----";
+    }
+}
+
+/**
+ * Gets and formats user step count for the day.
+ * @returns 
+ */
+function getSteps() {
+    let val = activity.adjusted.steps || 0;
+    return {
+        raw: val,
+        formatted:
+            val > 999
+                ? `${Math.floor(val / 1000)},${("00" + (val % 1000)).slice(-3)}`
+                : val,
+    };
 }

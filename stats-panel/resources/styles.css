@@ -41,7 +41,7 @@
   text-length: 100;
   text-anchor: middle;
   x: 80;
-  y: 110;
+  y: 105;
   fill: white
 }
 
@@ -51,7 +51,7 @@
   text-length: 100;
   text-anchor: middle;
   x: 80;
-  y: 195;
+  y: 190;
   fill: white
 }
 
@@ -83,4 +83,23 @@
   x: 80;
   y: 310;
   fill: white
+}
+
+#stepsIcon {
+  x: "160";
+  y: "30";
+  width: "35";
+  height: "25";
+  fill: black; 
+  opacity: 1;
+}
+
+#stepCountLabel {
+  x: "200";
+  y: "50";
+  font-size: 30;
+  font-family: System-Bold;
+  text-length: 80;
+  text-anchor: start;
+  fill: black
 }
