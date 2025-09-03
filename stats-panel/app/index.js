@@ -22,4 +22,55 @@
  * SOFTWARE.
  */
 
-console.log('Hello world!');
+import clock from "clock";
+import * as document from "document";
+import { preferences } from "user-settings";
+
+// Update the clock every second
+clock.granularity = "minutes";
+
+// Get a handle on the <text> elements
+const minuteLabel = document.getElementById("minuteLabel");
+const hourLabel = document.getElementById("hourLabel");
+
+/**
+ * Update the display of clock values.
+ * @param {*} evt 
+ */
+clock.ontick = (evt) => {
+
+  // get time information from API
+  let todayDate = evt.date;
+  let rawHours = todayDate.getHours();
+  let mins = todayDate.getMinutes();
+  let displayMins = zeroPad(mins);
+
+  let hours;
+  if (preferences.clockDisplay === "12h") {
+    // 12 hour format
+    hours = rawHours % 12 || 12;
+  } else {
+    // 24 hour format
+    if (rawHours > 9) {
+      hours = zeroPad(rawHours);
+    } else {
+      hours = rawHours;
+    }
+  }
+
+  // display time on main clock
+  hourLabel.text = `${hours}`;
+  minuteLabel.text = `${displayMins}`;
+}
+
+/**
+ * Front appends a zero to an integer if less than ten.
+ * @param {*} i 
+ * @returns 
+ */
+function zeroPad(i) {
+  if (i < 10) {
+    i = "0" + i;
+  }
+  return i;
+}

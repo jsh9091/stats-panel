@@ -34,3 +34,23 @@
   height: 100%;
   fill: black;
 }
+
+#hourLabel {
+  font-size: 95;
+  font-family: FBNucleon-Bold;
+  text-length: 100;
+  text-anchor: middle;
+  x: 80;
+  y: 110;
+  fill: white
+}
+
+#minuteLabel {
+  font-size: 95;
+  font-family: FBNucleon-Bold;
+  text-length: 100;
+  text-anchor: middle;
+  x: 80;
+  y: 200;
+  fill: white
+}

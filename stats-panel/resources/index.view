@@ -23,5 +23,9 @@
 
 <svg>
   <rect id="background" />
-  <rect x="155" y="18" width="42%" height="89%" fill="green" id="status-panel" />
+
+  <text id="hourLabel" />
+  <text id="minuteLabel" />
+
+  <rect x="155" y="20" width="140" height="295" fill="green" id="status-panel" />
 </svg>
