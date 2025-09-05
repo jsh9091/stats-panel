@@ -36,6 +36,8 @@ clock.granularity = "minutes";
 // Get a handle on the <text> elements
 const minuteLabel = document.getElementById("minuteLabel");
 const hourLabel = document.getElementById("hourLabel");
+const hourShadow = document.getElementById("hourShadow");
+const minuteShadow = document.getElementById("minuteShadow");
 const dayOfWeekLabel = document.getElementById("dayOfWeekLabel");
 const monthLabel = document.getElementById("monthLabel");
 const yearLabel = document.getElementById("yearLabel");
@@ -72,6 +74,10 @@ clock.ontick = (evt) => {
     // display time on main clock
     hourLabel.text = `${hours}`;
     minuteLabel.text = `${displayMins}`;
+
+    // update drop shadow
+    hourShadow.text = hourLabel.text;
+    minuteShadow.text = minuteLabel.text;
 
     updateDayField(evt);
     updateDateFields(evt);

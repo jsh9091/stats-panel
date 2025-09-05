@@ -55,6 +55,26 @@
   fill: white
 }
 
+#hourShadow {
+  font-size: 90;
+  font-family: FBNucleon-Bold;
+  text-length: 100;
+  text-anchor: middle;
+  x: 84;
+  y: 109;
+  fill: green
+}
+
+#minuteShadow {
+  font-size: 90;
+  font-family: FBNucleon-Bold;
+  text-length: 100;
+  text-anchor: middle;
+  x: 84;
+  y: 194;
+  fill: green
+}
+
 #dayOfWeekLabel {
   font-size: 30;
   font-family: FBNucleon-Medium;

@@ -24,6 +24,9 @@
 <svg>
   <rect id="background" />
 
+  <text id="hourShadow" />
+  <text id="minuteShadow" />
+
   <text id="hourLabel" />
   <text id="minuteLabel" />
 
