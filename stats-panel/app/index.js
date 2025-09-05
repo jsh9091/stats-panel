@@ -62,6 +62,8 @@ clock.ontick = (evt) => {
     if (preferences.clockDisplay === "12h") {
         // 12 hour format
         hours = rawHours % 12 || 12;
+        // leading zeros for hour
+        hours = zeroPad(hours);
     } else {
         // 24 hour format
         if (rawHours > 9) {

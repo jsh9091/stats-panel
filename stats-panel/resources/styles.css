@@ -41,7 +41,7 @@
   text-length: 100;
   text-anchor: middle;
   x: 80;
-  y: 105;
+  y: 95;
   fill: white
 }
 
@@ -51,7 +51,7 @@
   text-length: 100;
   text-anchor: middle;
   x: 80;
-  y: 190;
+  y: 180;
   fill: white
 }
 
@@ -61,7 +61,7 @@
   text-length: 100;
   text-anchor: middle;
   x: 84;
-  y: 109;
+  y: 95+4;
   fill: green
 }
 
@@ -71,7 +71,7 @@
   text-length: 100;
   text-anchor: middle;
   x: 84;
-  y: 194;
+  y: 180+4;
   fill: green
 }
 

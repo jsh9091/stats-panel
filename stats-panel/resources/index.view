@@ -30,6 +30,8 @@
   <text id="hourLabel" />
   <text id="minuteLabel" />
 
+   <rect x="10" y="197" width="200" height="3" fill="green" />
+
   <text id="dayOfWeekLabel" />
   <text id="monthLabel" />
   <text id="yearLabel" />
