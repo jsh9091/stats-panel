@@ -122,3 +122,21 @@
   text-anchor: start;
   fill: black
 }
+
+#tempIcon {
+  x: "163";
+  y: "94";
+  width: "16";
+  height: "29";
+  fill: black;
+}
+
+#tempLabel {
+  x: "185";
+  y: "120";
+  font-size: 35;
+  font-family: System-Bold;
+  text-length: 128;
+  text-anchor: start;
+  fill: black;
+}

@@ -39,4 +39,6 @@
   <text id="batteryLabel" />
   <image id="batteryIcon" href="battery-full.png" />
   
+  <text id="tempLabel" />
+  <image id="tempIcon" href="thermometer.png" />
 </svg>
