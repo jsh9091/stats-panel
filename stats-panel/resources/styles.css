@@ -103,3 +103,22 @@
   text-anchor: start;
   fill: black
 }
+
+#batteryIcon {
+  x: "163";
+  y: "62";
+  width: "35";
+  height: "20";
+  fill: black; 
+  opacity: 1; 
+}
+
+#batteryLabel {
+  x: "205";
+  y: "82";
+  font-size: 30;
+  font-family: System-Bold;
+  text-length: 80;
+  text-anchor: start;
+  fill: black
+}
