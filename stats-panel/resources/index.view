@@ -38,14 +38,14 @@
 
   <rect x="155" y="20" width="140" height="295" fill="green" id="status-panel" />
 
-  <text id="stepCountLabel" />
   <image id="stepsIcon" href="steps.png" />
+  <text id="stepCountLabel" />
 
-  <text id="batteryLabel" />
   <image id="batteryIcon" href="battery-full.png" />
+  <text id="batteryLabel" />
   
-  <text id="tempLabel" />
   <image id="tempIcon" href="thermometer.png" />
+  <text id="tempLabel" />
 
   <text id="heartRateLabel" />
 

@@ -239,6 +239,7 @@ function toFahrenheit(data) {
   }
   return data
 }
+
 ////////////////////////
 // HeartRateSensor code
 ////////////////////////
@@ -247,7 +248,6 @@ heartRateLabel.text = "---";
 
 if (HeartRateSensor && appbit.permissions.granted("access_heart_rate")) {
   if (HeartRateSensor) {
-    // 1 reading per second, 60 readings per batch
     let hrm = new HeartRateSensor();
 
     hrm.onreading = function () {
@@ -260,7 +260,5 @@ if (HeartRateSensor && appbit.permissions.granted("access_heart_rate")) {
       display.on ? hrm.start() : hrm.stop();
     });
     hrm.start();
-
-    // TODO: add/re-examine BodyPresenceSensor test
   }
 }
