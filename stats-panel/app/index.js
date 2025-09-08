@@ -29,6 +29,8 @@ import { today as activity } from "user-activity";
 import { me as appbit } from "appbit";
 import { battery } from "power";
 import * as newfile from "./newfile";
+import { HeartRateSensor } from "heart-rate";
+import { display } from "display";
 
 // Update the clock every second
 clock.granularity = "minutes";
@@ -45,6 +47,8 @@ const stepCountLabel = document.getElementById("stepCountLabel");
 const batteryLabel = document.getElementById("batteryLabel");
 const batteryIcon = document.getElementById("batteryIcon");
 const tempLabel = document.getElementById("tempLabel");
+const heartRateLabel = document.getElementById("heartRateLabel");
+
 
 /**
  * Update the display of clock values.
@@ -234,4 +238,29 @@ function toFahrenheit(data) {
      data.unit = "Fahrenheit";
   }
   return data
+}
+////////////////////////
+// HeartRateSensor code
+////////////////////////
+// default value for heart rate label
+heartRateLabel.text = "---";
+
+if (HeartRateSensor && appbit.permissions.granted("access_heart_rate")) {
+  if (HeartRateSensor) {
+    // 1 reading per second, 60 readings per batch
+    let hrm = new HeartRateSensor();
+
+    hrm.onreading = function () {
+      // Peek the current sensor values
+      heartRateLabel.text = "[H] " + hrm.heartRate;
+    }
+
+    display.addEventListener("change", () => {
+      // Automatically stop the sensor when the screen is off to conserve battery
+      display.on ? hrm.start() : hrm.stop();
+    });
+    hrm.start();
+
+    // TODO: add/re-examine BodyPresenceSensor test
+  }
 }

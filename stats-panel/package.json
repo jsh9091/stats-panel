@@ -16,7 +16,8 @@
     "requestedPermissions": [
       "access_location",
       "access_activity",
-      "run_background"
+      "run_background",
+      "access_heart_rate"
     ],
     "buildTargets": [
       "atlas",

@@ -160,3 +160,14 @@
   text-anchor: start;
   fill: black;
 }
+
+#heartRateLabel {
+  x: "163";
+  y: "155";
+  font-size: 35;
+  font-family: System-Bold;
+  text-length: 128;
+  text-anchor: start;
+  fill: black;
+}
+
