@@ -320,7 +320,7 @@ if (HeartRateSensor && appbit.permissions.granted("access_heart_rate")) {
     });
     hrm.start();
 
-    // And update the display every 2 seconds
-    setInterval(updateDisplay, 2000);
+    // And update the display every 1 second
+    setInterval(hrm.onreading, 1000);
   }
 }
