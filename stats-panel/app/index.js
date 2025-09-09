@@ -319,5 +319,8 @@ if (HeartRateSensor && appbit.permissions.granted("access_heart_rate")) {
       display.on ? hrm.start() : hrm.stop();
     });
     hrm.start();
+
+    // And update the display every 2 seconds
+    setInterval(updateDisplay, 2000);
   }
 }
