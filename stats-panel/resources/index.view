@@ -50,4 +50,7 @@
   <image id="heartIcon" href="heart.png" />
   <text id="heartRateLabel" />
 
+  <text id="distanceLabel" />
+  <image id="distanceIcon" href="distance.png" />
+
 </svg>

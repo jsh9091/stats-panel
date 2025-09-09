@@ -164,20 +164,36 @@
 
 #heartIcon {
   x: "163";
-  y: "134";
-  width: "29";
-  height: "29";
+  y: "133";
+  width: "26";
+  height: "26";
   fill: black;
   opacity: 1; 
 }
 
 #heartRateLabel {
-  x: "200";
-  y: "160";
+  x: "195";
+  y: "157";
   font-size: 35;
   font-family: System-Bold;
-  text-length: 128;
+  text-length: 80;
   text-anchor: start;
   fill: black;
 }
 
+#distanceIcon {
+  x: "165";
+  y: "169";
+  width: "15";
+  height: "26" 
+}
+
+#distanceLabel {
+  x: "187";
+  y: "194";
+  font-size: 35;
+  font-family: System-Bold;
+  text-length: 80;
+  text-anchor: start;
+  fill: black;
+}

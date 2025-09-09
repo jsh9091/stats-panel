@@ -48,6 +48,7 @@ const batteryLabel = document.getElementById("batteryLabel");
 const batteryIcon = document.getElementById("batteryIcon");
 const tempLabel = document.getElementById("tempLabel");
 const heartRateLabel = document.getElementById("heartRateLabel");
+const distanceLabel = document.getElementById("distanceLabel");
 
 
 /**
@@ -87,7 +88,7 @@ clock.ontick = (evt) => {
 
     updateDayField(evt);
     updateDateFields(evt);
-    updateSteps();
+    updateExerciseFields();
     updateBattery();
 }
 
@@ -142,15 +143,17 @@ function updateDateFields(evt) {
 }
 
 /**
- * Updates steps count label.
+ * Updates exercise fields in the GUI. 
  */
-function updateSteps() {
-    // handle case of user permission for step counts is not there
-    if (appbit.permissions.granted("access_activity")) {
-        stepCountLabel.text = getSteps().formatted;
-    } else {
-        stepCountLabel.text = "-----";
-    }
+function updateExerciseFields() {
+  if (appbit.permissions.granted("access_activity")) {
+    stepCountLabel.text = getSteps().formatted;
+    distanceLabel.text = getDistance();
+
+  } else {
+    stepCountLabel.text = "----";
+    distanceLabel.text = "----";
+  }
 }
 
 /**
@@ -166,6 +169,27 @@ function getSteps() {
                 ? `${Math.floor(val / 1000)},${("00" + (val % 1000)).slice(-3)}`
                 : val,
     };
+}
+
+/**
+ * Calculates distance values for display based on user settings.
+ * @returns 
+ */
+function getDistance() {
+  let val = activity.adjusted.distance || 0;
+  let suffix;
+
+  if (units.distance === "metric") {
+    let km = val / 1000;
+    val = km.toFixed(1);
+    suffix = " k"
+  } else {
+    let mi = val * 0.000621371192;
+    val = mi.toFixed(1);
+    suffix = " m"
+  }
+  
+  return val + suffix;
 }
 
 /**
