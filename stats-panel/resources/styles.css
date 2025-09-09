@@ -146,16 +146,16 @@
 #tempIcon {
   x: "163";
   y: "94";
-  width: "16";
-  height: "29";
+  width: "15";
+  height: "25";
   fill: black;
   opacity: 1; 
 }
 
 #tempLabel {
   x: "185";
-  y: "120";
-  font-size: 35;
+  y: "117";
+  font-size: 30;
   font-family: System-Bold;
   text-length: 128;
   text-anchor: start;
@@ -165,16 +165,16 @@
 #heartIcon {
   x: "163";
   y: "133";
-  width: "26";
-  height: "26";
+  width: "24";
+  height: "24";
   fill: black;
   opacity: 1; 
 }
 
 #heartRateLabel {
   x: "195";
-  y: "157";
-  font-size: 35;
+  y: "156";
+  font-size: 30;
   font-family: System-Bold;
   text-length: 80;
   text-anchor: start;
@@ -184,14 +184,14 @@
 #distanceIcon {
   x: "164";
   y: "169";
-  width: "15";
-  height: "26" 
+  width: "14";
+  height: "23" 
 }
 
 #distanceLabel {
   x: "185";
-  y: "194";
-  font-size: 35;
+  y: "190";
+  font-size: 30;
   font-family: System-Bold;
   text-length: 80;
   text-anchor: start;
@@ -200,15 +200,15 @@
 
 #calorieIcon {
   x: "165";
-  y: "208";
+  y: "205";
   width: "14";
   height: "24" 
 }
 
 #calorieLabel {
-  x: "185";
-  y: "230";
-  font-size: 35;
+  x: "186";
+  y: "227";
+  font-size: 30;
   font-family: System-Bold;
   text-length: 80;
   text-anchor: start;
