@@ -50,6 +50,7 @@ const tempLabel = document.getElementById("tempLabel");
 const heartRateLabel = document.getElementById("heartRateLabel");
 const distanceLabel = document.getElementById("distanceLabel");
 const calorieLabel = document.getElementById("calorieLabel");
+const activeZoneLabel = document.getElementById("activeZoneLabel");
 
 /**
  * Update the display of clock values.
@@ -150,11 +151,14 @@ function updateExerciseFields() {
     stepCountLabel.text = getSteps().formatted;
     distanceLabel.text = getDistance();
     calorieLabel.text = getCalories().formatted;
+    activeZoneLabel.text = "^ " + activity.adjusted.activeZoneMinutes.total; // TODO icon for active zone
 
   } else {
-    stepCountLabel.text = "----";
-    distanceLabel.text = "----";
-    calorieLabel.text = "----";
+    const empty = "----";
+    stepCountLabel.text = empty;
+    distanceLabel.text = empty;
+    calorieLabel.text = empty;
+    activeZoneLabel.text = empty;
   }
 }
 

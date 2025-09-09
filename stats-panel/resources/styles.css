@@ -214,3 +214,13 @@
   text-anchor: start;
   fill: black;
 }
+
+#activeZoneLabel {
+  x: "165";
+  y: "265";
+  font-size: 30;
+  font-family: System-Bold;
+  text-length: 80;
+  text-anchor: start;
+  fill: black;
+}

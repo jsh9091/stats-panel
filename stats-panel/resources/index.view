@@ -56,4 +56,6 @@
   <text id="calorieLabel" />
   <image id="calorieIcon" href="flame.png" />
 
+  <text id="activeZoneLabel" />
+
 </svg>
