@@ -53,4 +53,7 @@
   <text id="distanceLabel" />
   <image id="distanceIcon" href="distance.png" />
 
+  <text id="calorieLabel" />
+  <image id="calorieIcon" href="flame.png" />
+
 </svg>

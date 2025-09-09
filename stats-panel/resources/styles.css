@@ -197,3 +197,20 @@
   text-anchor: start;
   fill: black;
 }
+
+#calorieIcon {
+  x: "165";
+  y: "208";
+  width: "14";
+  height: "24" 
+}
+
+#calorieLabel {
+  x: "185";
+  y: "230";
+  font-size: 35;
+  font-family: System-Bold;
+  text-length: 80;
+  text-anchor: start;
+  fill: black;
+}

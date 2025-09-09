@@ -49,7 +49,7 @@ const batteryIcon = document.getElementById("batteryIcon");
 const tempLabel = document.getElementById("tempLabel");
 const heartRateLabel = document.getElementById("heartRateLabel");
 const distanceLabel = document.getElementById("distanceLabel");
-
+const calorieLabel = document.getElementById("calorieLabel");
 
 /**
  * Update the display of clock values.
@@ -149,10 +149,12 @@ function updateExerciseFields() {
   if (appbit.permissions.granted("access_activity")) {
     stepCountLabel.text = getSteps().formatted;
     distanceLabel.text = getDistance();
+    calorieLabel.text = getCalories().formatted;
 
   } else {
     stepCountLabel.text = "----";
     distanceLabel.text = "----";
+    calorieLabel.text = "----";
   }
 }
 
@@ -208,6 +210,21 @@ function getDistance() {
   }
 
   return val + suffix;
+}
+
+/**
+ * Gets and formats user calories burned for the day.
+ * @returns
+ */
+function getCalories() {
+  let val = activity.adjusted.calories || 0;
+  return {
+    raw: val,
+    formatted:
+      val > 999
+        ? `${Math.floor(val / 1000)},${("00" + (val % 1000)).slice(-3)}`
+        : val,
+  };
 }
 
 /**
