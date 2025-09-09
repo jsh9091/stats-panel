@@ -181,14 +181,32 @@ function getDistance() {
 
   if (units.distance === "metric") {
     let km = val / 1000;
-    val = km.toFixed(1);
+
+    // if user walked at least 100 km
+    if (Math.floor(km) >= 100) {
+      // get value that is a whole number
+      val = Math.floor(km)
+    } else {
+      // we have room for one decimal number
+      val = km.toFixed(1);
+    }
     suffix = " k"
+
   } else {
+    // distance setting is miles
     let mi = val * 0.000621371192;
-    val = mi.toFixed(1);
+
+    // if user walked at least 100 miles
+    if (Math.floor(mi) >= 100) {
+      // get value that is a whole number
+      val = Math.floor(mi)
+    } else {
+      // we have room for one decimal number
+      val = mi.toFixed(1);
+    }
     suffix = " m"
   }
-  
+
   return val + suffix;
 }
 
