@@ -40,6 +40,8 @@ const minuteLabel = document.getElementById("minuteLabel");
 const hourLabel = document.getElementById("hourLabel");
 const hourShadow = document.getElementById("hourShadow");
 const minuteShadow = document.getElementById("minuteShadow");
+const amCircle = document.getElementById("amCircle");
+const pmCircle = document.getElementById("pmCircle");
 const dayOfWeekLabel = document.getElementById("dayOfWeekLabel");
 const monthLabel = document.getElementById("monthLabel");
 const yearLabel = document.getElementById("yearLabel");
@@ -87,7 +89,8 @@ clock.ontick = (evt) => {
     // update drop shadow
     hourShadow.text = hourLabel.text;
     minuteShadow.text = minuteLabel.text;
-
+    
+    amPmDisplay(evt)
     updateDayField(evt);
     updateDateFields(evt);
     updateExerciseFields();
@@ -104,6 +107,26 @@ function zeroPad(i) {
         i = "0" + i;
     }
     return i;
+}
+
+/**
+ * Updates display of AM and PM indicators. 
+ * @param {*} evt 
+ */
+function amPmDisplay(evt) {
+  // perform reset, do not display anything on 24 hr
+  amCircle.style.fill = "black";
+  pmCircle.style.fill = "black";
+
+  if (preferences.clockDisplay === "12h") {
+    const rawHours = evt.date.getHours();
+
+    if (rawHours < 12) {
+      amCircle.style.fill = "green";
+    } else {
+      pmCircle.style.fill = "green";
+    }
+  }
 }
 
 /**
