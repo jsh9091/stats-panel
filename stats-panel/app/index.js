@@ -252,7 +252,7 @@ if (HeartRateSensor && appbit.permissions.granted("access_heart_rate")) {
 
     hrm.onreading = function () {
       // Peek the current sensor values
-      heartRateLabel.text = "[H] " + hrm.heartRate;
+      heartRateLabel.text = hrm.heartRate;
     }
 
     display.addEventListener("change", () => {

@@ -149,6 +149,7 @@
   width: "16";
   height: "29";
   fill: black;
+  opacity: 1; 
 }
 
 #tempLabel {
@@ -161,9 +162,18 @@
   fill: black;
 }
 
-#heartRateLabel {
+#heartIcon {
   x: "163";
-  y: "155";
+  y: "134";
+  width: "29";
+  height: "29";
+  fill: black;
+  opacity: 1; 
+}
+
+#heartRateLabel {
+  x: "200";
+  y: "160";
   font-size: 35;
   font-family: System-Bold;
   text-length: 128;
