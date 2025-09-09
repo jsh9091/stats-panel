@@ -224,3 +224,20 @@
   text-anchor: start;
   fill: black;
 }
+
+#floorsIcon {
+  x: "165";
+  y: "277";
+  width: "33";
+  height: "20" 
+}
+
+#floorsLabel {
+  x: "205";
+  y: "295";
+  font-size: 30;
+  font-family: System-Bold;
+  text-length: 80;
+  text-anchor: start;
+  fill: black;
+}
