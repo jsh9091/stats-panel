@@ -31,7 +31,7 @@ const KEY_COLOR = "color";
  * Establishes values for default settings on fresh install.
  */
 export function setDefaultSettings() {
-  setDefaultSetting(KEY_COLOR, "aqua");
+  setDefaultSetting(KEY_COLOR, "green");
   //setDefaultSetting(KEY_MODE, {"selected":[0],"values":[{"name":hexadecimal,"value":0}]});
 }
 

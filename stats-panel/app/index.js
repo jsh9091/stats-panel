@@ -34,6 +34,7 @@ import { display } from "display";
 import * as simpleSettings from "./simple/device-settings";
 
 let color = "green";
+let currentRawHour = 0;
 
 // Update the clock every second
 clock.granularity = "minutes";
@@ -87,6 +88,7 @@ function setColor() {
     minuteShadow.style.fill = color;
     seperatorbar.style.fill = color;
     statuspanel.style.fill = color;
+    amPmDisplay();
 }
 
 /**
@@ -97,7 +99,8 @@ clock.ontick = (evt) => {
 
     // get time information from API
     let todayDate = evt.date;
-    let rawHours = todayDate.getHours();
+    const rawHours = todayDate.getHours();
+    currentRawHour = rawHours;
     let mins = todayDate.getMinutes();
     let displayMins = zeroPad(mins);
 
@@ -124,7 +127,7 @@ clock.ontick = (evt) => {
     hourShadow.text = hourLabel.text;
     minuteShadow.text = minuteLabel.text;
     
-    amPmDisplay(evt)
+    amPmDisplay()
     updateDayField(evt);
     updateDateFields(evt);
     updateExerciseFields();
@@ -145,20 +148,17 @@ function zeroPad(i) {
 
 /**
  * Updates display of AM and PM indicators. 
- * @param {*} evt 
  */
-function amPmDisplay(evt) {
+function amPmDisplay() {
   // perform reset, do not display anything on 24 hr
   amCircle.style.fill = "black";
   pmCircle.style.fill = "black";
 
   if (preferences.clockDisplay === "12h") {
-    const rawHours = evt.date.getHours();
-
-    if (rawHours < 12) {
-      amCircle.style.fill = "green";
+    if (currentRawHour < 12) {
+      amCircle.style.fill = color;
     } else {
-      pmCircle.style.fill = "green";
+      pmCircle.style.fill = color;
     }
   }
 }
