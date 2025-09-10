@@ -175,7 +175,7 @@ function updateExerciseFields() {
     stepCountLabel.text = getSteps().formatted;
     distanceLabel.text = getDistance();
     calorieLabel.text = getCalories().formatted;
-    activeZoneLabel.text = "^ " + activity.adjusted.activeZoneMinutes.total; // TODO icon for active zone
+    activeZoneLabel.text = activity.adjusted.activeZoneMinutes.total;
     floorsLabel.text = activity.adjusted.elevationGain;
 
   } else {

@@ -215,9 +215,16 @@
   fill: black;
 }
 
-#activeZoneLabel {
+#activeZoneIcon {
   x: "165";
-  y: "265";
+  y: "240";
+  width: "20";
+  height: "25";
+}
+
+#activeZoneLabel {
+  x: "195";
+  y: "262";
   font-size: 30;
   font-family: System-Bold;
   text-length: 80;
