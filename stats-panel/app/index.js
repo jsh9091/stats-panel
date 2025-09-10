@@ -35,6 +35,7 @@ import * as simpleSettings from "./simple/device-settings";
 
 let color = "green";
 let currentRawHour = 0;
+let zeroLeadHours = true;
 
 // Update the clock every second
 clock.granularity = "minutes";
@@ -58,7 +59,6 @@ const distanceLabel = document.getElementById("distanceLabel");
 const calorieLabel = document.getElementById("calorieLabel");
 const activeZoneLabel = document.getElementById("activeZoneLabel");
 const floorsLabel = document.getElementById("floorsLabel");
-
 const statuspanel = document.getElementById("statuspanel");
 const seperatorbar = document.getElementById("seperatorbar");
 
@@ -76,6 +76,10 @@ function settingsCallback(data) {
     color = data.color;
     setColor();
   }
+
+  // get new leading zero setting
+  zeroLeadHours = data.leadingzero;
+  clock.granularity = "seconds";
   
 }
 simpleSettings.initialize(settingsCallback);
@@ -84,11 +88,11 @@ simpleSettings.initialize(settingsCallback);
  * Sets display elements to current color.
  */
 function setColor() {
-    hourShadow.style.fill = color;
-    minuteShadow.style.fill = color;
-    seperatorbar.style.fill = color;
-    statuspanel.style.fill = color;
-    amPmDisplay();
+  hourShadow.style.fill = color;
+  minuteShadow.style.fill = color;
+  seperatorbar.style.fill = color;
+  statuspanel.style.fill = color;
+  amPmDisplay();
 }
 
 /**
@@ -97,41 +101,43 @@ function setColor() {
  */
 clock.ontick = (evt) => {
 
-    // get time information from API
-    let todayDate = evt.date;
-    const rawHours = todayDate.getHours();
-    currentRawHour = rawHours;
-    let mins = todayDate.getMinutes();
-    let displayMins = zeroPad(mins);
+  // get time information from API
+  let todayDate = evt.date;
+  const rawHours = todayDate.getHours();
+  let mins = todayDate.getMinutes();
+  let displayMins = zeroPad(mins);
+  currentRawHour = rawHours;
 
-    let hours;
-    if (preferences.clockDisplay === "12h") {
-        // 12 hour format
-        hours = rawHours % 12 || 12;
-        // leading zeros for hour
-        hours = zeroPad(hours);
-    } else {
-        // 24 hour format
-        if (rawHours > 9) {
-            hours = zeroPad(rawHours);
-        } else {
-            hours = rawHours;
-        }
-    }
+  let hours;
+  if (preferences.clockDisplay === "12h") {
+    // 12 hour format
+    hours = rawHours % 12 || 12;
+  } else {
+    // 24 hour format
+    hours = rawHours;
+  }
 
-    // display time on main clock
-    hourLabel.text = `${hours}`;
-    minuteLabel.text = `${displayMins}`;
+  if (zeroLeadHours) {
+    // leading zeros for hour
+    hours = zeroPad(hours);
+  }
 
-    // update drop shadow
-    hourShadow.text = hourLabel.text;
-    minuteShadow.text = minuteLabel.text;
-    
-    amPmDisplay()
-    updateDayField(evt);
-    updateDateFields(evt);
-    updateExerciseFields();
-    updateBattery();
+  // display time on main clock
+  hourLabel.text = `${hours}`;
+  minuteLabel.text = `${displayMins}`;
+
+  // update drop shadow
+  hourShadow.text = hourLabel.text;
+  minuteShadow.text = minuteLabel.text;
+
+  amPmDisplay()
+  updateDayField(evt);
+  updateDateFields(evt);
+  updateExerciseFields();
+  updateBattery();
+
+  // reset, if needed
+  clock.granularity = "minutes";
 }
 
 /**

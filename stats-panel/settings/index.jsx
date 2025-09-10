@@ -49,7 +49,7 @@ registerSettingsPage(({ settings }) => (
         ]}
       />
       <Toggle
-          settingsKey="toggle"
+          settingsKey="leadingzero"
           label="Leading Zero for Hours"
       />
     </Section>

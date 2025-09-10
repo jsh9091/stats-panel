@@ -26,13 +26,14 @@ import * as messaging from "messaging";
 import { settingsStorage } from "settings";
 
 const KEY_COLOR = "color";
+const KEY_LEADING_ZERO = "leadingzero";
 
 /**
  * Establishes values for default settings on fresh install.
  */
 export function setDefaultSettings() {
   setDefaultSetting(KEY_COLOR, "green");
-  //setDefaultSetting(KEY_MODE, {"selected":[0],"values":[{"name":hexadecimal,"value":0}]});
+  setDefaultSetting(KEY_LEADING_ZERO, true);
 }
 
 /**
@@ -64,10 +65,9 @@ export function initialize() {
       if (evt.key == KEY_COLOR) {
         newValue = evt.newValue;
 
-      } //else if (evt.key == KEY_MODE) {
-        //let rawName = JSON.parse(evt.newValue).values[0].name;
-        //newValue = '"' + rawName + '"';
-      //}
+      } else if (evt.key == KEY_LEADING_ZERO) {
+        newValue = evt.newValue;
+      }
 
       sendValue(evt.key, newValue);
     }
