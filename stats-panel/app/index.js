@@ -31,6 +31,9 @@ import { battery } from "power";
 import * as newfile from "./newfile";
 import { HeartRateSensor } from "heart-rate";
 import { display } from "display";
+import * as simpleSettings from "./simple/device-settings";
+
+let color = "green";
 
 // Update the clock every second
 clock.granularity = "minutes";
@@ -54,6 +57,37 @@ const distanceLabel = document.getElementById("distanceLabel");
 const calorieLabel = document.getElementById("calorieLabel");
 const activeZoneLabel = document.getElementById("activeZoneLabel");
 const floorsLabel = document.getElementById("floorsLabel");
+
+const statuspanel = document.getElementById("statuspanel");
+const seperatorbar = document.getElementById("seperatorbar");
+
+/**
+ * Get and process settings changes.
+ * @param {*} data 
+ * @returns 
+ */
+function settingsCallback(data) {
+  if (!data) {
+    return;
+  }
+
+  if (data.color) {
+    color = data.color;
+    setColor();
+  }
+  
+}
+simpleSettings.initialize(settingsCallback);
+
+/**
+ * Sets display elements to current color.
+ */
+function setColor() {
+    hourShadow.style.fill = color;
+    minuteShadow.style.fill = color;
+    seperatorbar.style.fill = color;
+    statuspanel.style.fill = color;
+}
 
 /**
  * Update the display of clock values.

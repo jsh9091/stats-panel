@@ -27,6 +27,10 @@ import { me as companion } from "companion";
 import { outbox } from "file-transfer";
 import { weather } from "weather";
 import { dataFile, wakeTime } from "../common/constants";
+import * as simpleSettings from "./simple/companion-settings";
+
+simpleSettings.setDefaultSettings();
+simpleSettings.initialize();
 
 /**
  * Update tempature data from phone. 

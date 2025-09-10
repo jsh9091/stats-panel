@@ -27,11 +27,31 @@ registerSettingsPage(({ settings }) => (
     <Section
       title={
         <Text bold align="center">
-          App Settings
+          Stats Panel Clockface Settings
         </Text>
       }
     >
-      <Text>Hello world!</Text>
+      <ColorSelect
+        settingsKey="color"
+        colors={[
+          { color: "aqua" },
+          { color: "red" },
+          { color: "gold" },
+          { color: "orchid" },
+          { color: "green" },
+          { color: "silver" },
+          { color: "dodgerblue" },
+          { color: "hotpink" },
+          { color: "bisque" },
+          { color: "orange" },
+          { color: "greenyellow" },
+          { color: "skyblue" },
+        ]}
+      />
+      <Toggle
+          settingsKey="toggle"
+          label="Leading Zero for Hours"
+      />
     </Section>
   </Page>
 ));
