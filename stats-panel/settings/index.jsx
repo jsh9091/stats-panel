@@ -34,18 +34,13 @@ registerSettingsPage(({ settings }) => (
       <ColorSelect
         settingsKey="color"
         colors={[
-          { color: "aqua" },
           { color: "red" },
-          { color: "gold" },
           { color: "orchid" },
           { color: "green" },
-          { color: "silver" },
           { color: "dodgerblue" },
-          { color: "hotpink" },
-          { color: "bisque" },
-          { color: "orange" },
-          { color: "greenyellow" },
-          { color: "skyblue" },
+          { color: "mediumslateblue" },
+          { color: "orangered" },
+          { color: "teal" },
         ]}
       />
       <Toggle
