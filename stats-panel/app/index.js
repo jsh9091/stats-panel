@@ -75,11 +75,12 @@ function settingsCallback(data) {
   if (data.color) {
     color = data.color;
     setColor();
-  }
 
-  // get new leading zero setting
-  zeroLeadHours = data.leadingzero;
-  clock.granularity = "seconds";
+  } else {
+    // get new leading zero setting
+    zeroLeadHours = data.leadingzero;
+    clock.granularity = "seconds";
+  }
   
 }
 simpleSettings.initialize(settingsCallback);
@@ -381,7 +382,14 @@ if (HeartRateSensor && appbit.permissions.granted("access_heart_rate")) {
 
     hrm.onreading = function () {
       // Peek the current sensor values
-      heartRateLabel.text = hrm.heartRate;
+      let rate = hrm.heartRate;
+
+      // guard against values we don't want to display
+      if (rate === undefined || rate === null || rate < 0) {
+        rate = "?"
+      }
+
+      heartRateLabel.text = rate;
     }
 
     display.addEventListener("change", () => {
