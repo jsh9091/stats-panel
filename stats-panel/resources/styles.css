@@ -153,7 +153,7 @@
 }
 
 #tempLabel {
-  x: "190";
+  x: "192";
   y: "123";
   font-size: 30;
   font-family: System-Bold;
@@ -165,14 +165,14 @@
 #heartIcon {
   x: "163";
   y: "138";
-  width: "24";
+  width: "22";
   height: "24";
   fill: black;
   opacity: 1; 
 }
 
 #heartRateLabel {
-  x: "195";
+  x: "192";
   y: "161";
   font-size: 30;
   font-family: System-Bold;
@@ -189,7 +189,7 @@
 }
 
 #distanceLabel {
-  x: "188";
+  x: "192";
   y: "196";
   font-size: 30;
   font-family: System-Bold;
@@ -206,7 +206,7 @@
 }
 
 #calorieLabel {
-  x: "190";
+  x: "192";
   y: "233";
   font-size: 30;
   font-family: System-Bold;
@@ -217,14 +217,14 @@
 
 #activeZoneIcon {
   x: "165";
-  y: "245";
+  y: "247";
   width: "20";
-  height: "25";
+  height: "22";
 }
 
 #activeZoneLabel {
-  x: "195";
-  y: "270";
+  x: "192";
+  y: "268";
   font-size: 30;
   font-family: System-Bold;
   text-length: 80;
@@ -235,12 +235,12 @@
 #floorsIcon {
   x: "165";
   y: "283";
-  width: "40";
+  width: "22";
   height: "20" 
 }
 
 #floorsLabel {
-  x: "213";
+  x: "193";
   y: "303";
   font-size: 30;
   font-family: System-Bold;
