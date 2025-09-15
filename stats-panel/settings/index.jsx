@@ -34,9 +34,8 @@ registerSettingsPage(({ settings }) => (
       <ColorSelect
         settingsKey="color"
         colors={[
-          { color: "red" },
-          { color: "orchid" },
           { color: "green" },
+          { color: "orchid" },
           { color: "dodgerblue" },
           { color: "mediumslateblue" },
           { color: "orangered" },
