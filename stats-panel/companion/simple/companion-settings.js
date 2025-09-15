@@ -27,6 +27,7 @@ import { settingsStorage } from "settings";
 
 const KEY_COLOR = "color";
 const KEY_LEADING_ZERO = "leadingzero";
+const KEY_AM_PM = "ampm";
 
 /**
  * Establishes values for default settings on fresh install.
@@ -34,6 +35,7 @@ const KEY_LEADING_ZERO = "leadingzero";
 export function setDefaultSettings() {
   setDefaultSetting(KEY_COLOR, "green");
   setDefaultSetting(KEY_LEADING_ZERO, true);
+  setDefaultSetting(KEY_AM_PM, true);
 }
 
 /**
@@ -66,6 +68,9 @@ export function initialize() {
         newValue = evt.newValue;
 
       } else if (evt.key == KEY_LEADING_ZERO) {
+        newValue = evt.newValue;
+      
+      } else if (evt.key == KEY_AM_PM) {
         newValue = evt.newValue;
       }
 

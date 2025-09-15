@@ -37,6 +37,7 @@ import * as messaging from "messaging";
 let color = "green";
 let currentRawHour = 0;
 let zeroLeadHours = true;
+let showAmPm = true;
 
 // Update the clock every second
 clock.granularity = "minutes";
@@ -86,6 +87,9 @@ simpleSettings.initialize(settingsCallback);
 messaging.peerSocket.addEventListener("message", (evt) => {
   if (evt && evt.data && evt.data.key === "leadingzero") {
     zeroLeadHours = evt.data.value;
+    clock.granularity = "seconds";
+  } else if (evt && evt.data && evt.data.key === "ampm") {
+    showAmPm = evt.data.value;
     clock.granularity = "seconds";
   }
 });
@@ -166,7 +170,7 @@ function amPmDisplay() {
   amCircle.style.fill = "black";
   pmCircle.style.fill = "black";
 
-  if (preferences.clockDisplay === "12h") {
+  if (showAmPm) {
     if (currentRawHour < 12) {
       amCircle.style.fill = color;
     } else {

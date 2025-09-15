@@ -46,6 +46,10 @@ registerSettingsPage(({ settings }) => (
           settingsKey="leadingzero"
           label="Leading Zero for Hours"
       />
+      <Toggle
+          settingsKey="ampm"
+          label="Show AM/PM"
+      />
     </Section>
   </Page>
 ));
