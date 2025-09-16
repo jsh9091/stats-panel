@@ -47,9 +47,6 @@
   <image id="batteryIcon" href="battery-full.png" />
   <text id="batteryLabel" />
   
-  <image id="tempIcon" href="thermometer.png" />
-  <text id="tempLabel" />
-  
   <image id="heartIcon" href="heart.png" />
   <text id="heartRateLabel" />
 
