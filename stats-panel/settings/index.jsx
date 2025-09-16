@@ -38,7 +38,7 @@ registerSettingsPage(({ settings }) => (
           { color: "orchid" },
           { color: "dodgerblue" },
           { color: "mediumslateblue" },
-          { color: "orangered" },
+          { color: "brown" },
           { color: "teal" },
         ]}
       />
