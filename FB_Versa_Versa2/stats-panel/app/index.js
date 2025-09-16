@@ -64,23 +64,6 @@ const statuspanel = document.getElementById("statuspanel");
 const seperatorbar = document.getElementById("seperatorbar");
 
 /**
- * Get and process settings changes.
- * @param {*} data 
- * @returns 
- */
-function settingsCallback(data) {
-  if (!data) {
-    return;
-  }
-
-  if (data.color) {
-    color = data.color;
-    setColor();
-  }
-}
-simpleSettings.initialize(settingsCallback);
-
-/**
  * Listener for leading zero settings change. 
  */
 messaging.peerSocket.addEventListener("message", (evt) => {
@@ -90,6 +73,9 @@ messaging.peerSocket.addEventListener("message", (evt) => {
   } else if (evt && evt.data && evt.data.key === "ampm") {
     showAmPm = evt.data.value;
     clock.granularity = "seconds";
+  } else if (evt && evt.data && evt.data.key === "color") {
+    color = evt.data.value;
+    setColor();
   }
 });
 

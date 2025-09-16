@@ -1,5 +1,5 @@
 # Stats Panel: Fitbit OS4 devices Setup
-### Versa, Versa Lite, Versa 2
+### Versa, Versa 2
 
 Developer environment and build guide. Although not required, this guide assumes the use of Visual Studio Code. 
 
