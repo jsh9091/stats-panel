@@ -40,7 +40,7 @@
   font-family: FBNucleon-Bold;
   text-length: 100;
   text-anchor: middle;
-  x: 80;
+  x: 76;
   y: 95;
   fill: white
 }
@@ -50,7 +50,7 @@
   font-family: FBNucleon-Bold;
   text-length: 100;
   text-anchor: middle;
-  x: 80;
+  x: 76;
   y: 180;
   fill: white
 }
@@ -60,7 +60,7 @@
   font-family: FBNucleon-Bold;
   text-length: 100;
   text-anchor: middle;
-  x: 84;
+  x: 80;
   y: 95+4;
   fill: green
 }
@@ -70,7 +70,7 @@
   font-family: FBNucleon-Bold;
   text-length: 100;
   text-anchor: middle;
-  x: 84;
+  x: 80;
   y: 180+4;
   fill: green
 }
@@ -80,7 +80,7 @@
   font-family: FBNucleon-Medium;
   text-length: 100;
   text-anchor: middle;
-  x: 80;
+  x: 76;
   y: 235;
   fill: white
 }
@@ -90,7 +90,7 @@
   font-family: FBNucleon-Medium;
   text-length: 100;
   text-anchor: middle;
-  x: 80;
+  x: 76;
   y: 270;
   fill: white
 }
@@ -100,7 +100,7 @@
   font-family: FBNucleon-Medium;
   text-length: 100;
   text-anchor: middle;
-  x: 80;
+  x: 76;
   y: 305;
   fill: white
 }
