@@ -327,8 +327,7 @@ function updateBattery() {
  * Updates the battery lable GUI for battery percentage. 
  */
 function updateBatteryLabel() {
-  let percentSign = "&#x25";
-  batteryLabel.text = battery.chargeLevel + percentSign;
+  batteryLabel.text = battery.chargeLevel + "%";
 }
 
 /**
