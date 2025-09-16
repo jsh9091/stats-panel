@@ -30,7 +30,7 @@
   <text id="hourLabel" />
   <text id="minuteLabel" />
 
-  <rect x="10" y="197" width="200" height="3" fill="green" id="seperatorbar" />
+  <rect x="0" y="197" width="200" height="3" fill="green" id="seperatorbar" />
 
   <circle id="amCircle" cx="39-15" cy="215" r="6" fill="black" />
   <circle id="pmCircle" cx="123+15" cy="215" r="6" fill="black" />
@@ -39,7 +39,7 @@
   <text id="monthLabel" />
   <text id="yearLabel" />
 
-  <rect x="155" y="20" width="140" height="295" fill="green" id="statuspanel" />
+  <rect x="155" y="0" width="145" height="300" fill="green" id="statuspanel" />
 
   <image id="stepsIcon" href="steps.png" />
   <text id="stepCountLabel" />
