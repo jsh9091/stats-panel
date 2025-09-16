@@ -1,0 +1,33 @@
+{
+  "name": "stats-panel",
+  "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@fitbit/sdk": "^4.2.2",
+    "@fitbit/sdk-cli": "^1.7.3"
+  },
+  "fitbit": {
+    "appUUID": "ed3b4a51-c150-4697-ad23-fa540ffb68f1",
+    "appType": "clockface",
+    "appDisplayName": "Stats Panel",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#ffffff",
+    "requestedPermissions": [
+      "access_location",
+      "access_activity",
+      "run_background",
+      "access_heart_rate"
+    ],
+    "buildTargets": [
+      "meson",
+      "mira"
+    ],
+    "i18n": {},
+    "defaultLanguage": "en-US"
+  },
+  "scripts": {
+    "build": "fitbit-build",
+    "debug": "fitbit"
+  }
+}

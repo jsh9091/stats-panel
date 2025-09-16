@@ -1,0 +1,250 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2025 Joshua Horvath
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+ 
+.defaultText {
+  font-size: 32;
+  font-family: System-Regular;
+  font-weight: regular;
+  text-length: 32;
+}
+
+#background {
+  width: 100%;
+  height: 100%;
+  fill: black;
+}
+
+#hourLabel {
+  font-size: 90;
+  font-family: FBNucleon-Bold;
+  text-length: 100;
+  text-anchor: middle;
+  x: 80;
+  y: 95;
+  fill: white
+}
+
+#minuteLabel {
+  font-size: 90;
+  font-family: FBNucleon-Bold;
+  text-length: 100;
+  text-anchor: middle;
+  x: 80;
+  y: 180;
+  fill: white
+}
+
+#hourShadow {
+  font-size: 90;
+  font-family: FBNucleon-Bold;
+  text-length: 100;
+  text-anchor: middle;
+  x: 84;
+  y: 95+4;
+  fill: green
+}
+
+#minuteShadow {
+  font-size: 90;
+  font-family: FBNucleon-Bold;
+  text-length: 100;
+  text-anchor: middle;
+  x: 84;
+  y: 180+4;
+  fill: green
+}
+
+#dayOfWeekLabel {
+  font-size: 30;
+  font-family: FBNucleon-Medium;
+  text-length: 100;
+  text-anchor: middle;
+  x: 80;
+  y: 235;
+  fill: white
+}
+
+#monthLabel {
+  font-size: 30;
+  font-family: FBNucleon-Medium;
+  text-length: 100;
+  text-anchor: middle;
+  x: 80;
+  y: 270;
+  fill: white
+}
+
+#yearLabel {
+  font-size: 30;
+  font-family: FBNucleon-Medium;
+  text-length: 100;
+  text-anchor: middle;
+  x: 80;
+  y: 305;
+  fill: white
+}
+
+#stepsIcon {
+  x: "166";
+  y: "30";
+  width: "20";
+  height: "25";
+  fill: black; 
+  opacity: 1;
+}
+
+#stepCountLabel {
+  x: "193";
+  y: "52";
+  font-size: 30;
+  font-family: System-Bold;
+  text-length: 80;
+  text-anchor: start;
+  fill: black
+}
+
+#batteryIcon {
+  x: "166";
+  y: "67";
+  width: "35";
+  height: "20";
+  fill: black; 
+  opacity: 1; 
+}
+
+#batteryLabel {
+  x: "209";
+  y: "87";
+  font-size: 30;
+  font-family: System-Bold;
+  text-length: 80;
+  text-anchor: start;
+  fill: black
+}
+
+#tempIcon {
+  x: "168";
+  y: "100";
+  width: "15";
+  height: "25";
+  fill: black;
+  opacity: 1; 
+}
+
+#tempLabel {
+  x: "192";
+  y: "123";
+  font-size: 30;
+  font-family: System-Bold;
+  text-length: 128;
+  text-anchor: start;
+  fill: black;
+}
+
+#heartIcon {
+  x: "163";
+  y: "138";
+  width: "22";
+  height: "24";
+  fill: black;
+  opacity: 1; 
+}
+
+#heartRateLabel {
+  x: "192";
+  y: "161";
+  font-size: 30;
+  font-family: System-Bold;
+  text-length: 80;
+  text-anchor: start;
+  fill: black;
+}
+
+#distanceIcon {
+  x: "167";
+  y: "175";
+  width: "14";
+  height: "23" 
+}
+
+#distanceLabel {
+  x: "192";
+  y: "196";
+  font-size: 30;
+  font-family: System-Bold;
+  text-length: 80;
+  text-anchor: start;
+  fill: black;
+}
+
+#calorieIcon {
+  x: "168";
+  y: "210";
+  width: "14";
+  height: "24" 
+}
+
+#calorieLabel {
+  x: "192";
+  y: "233";
+  font-size: 30;
+  font-family: System-Bold;
+  text-length: 80;
+  text-anchor: start;
+  fill: black;
+}
+
+#activeZoneIcon {
+  x: "165";
+  y: "247";
+  width: "20";
+  height: "22";
+}
+
+#activeZoneLabel {
+  x: "192";
+  y: "268";
+  font-size: 30;
+  font-family: System-Bold;
+  text-length: 80;
+  text-anchor: start;
+  fill: black;
+}
+
+#floorsIcon {
+  x: "165";
+  y: "283";
+  width: "22";
+  height: "20" 
+}
+
+#floorsLabel {
+  x: "193";
+  y: "303";
+  font-size: 30;
+  font-family: System-Bold;
+  text-length: 80;
+  text-anchor: start;
+  fill: black;
+}
