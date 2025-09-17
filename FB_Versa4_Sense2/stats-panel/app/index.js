@@ -32,7 +32,6 @@ import * as newfile from "./newfile";
 import { HeartRateSensor } from "heart-rate";
 import { display } from "display";
 import * as simpleSettings from "./simple/device-settings";
-import * as messaging from "messaging";
 
 let color = "green";
 let currentRawHour = 0;
@@ -78,21 +77,14 @@ function settingsCallback(data) {
     color = data.color;
     setColor();
   }
+
+  // always set boolean data from data
+  zeroLeadHours = data.leadingzero;
+  showAmPm = data.ampm;
+  // enforce update on display quickly
+  clock.granularity = "seconds";
 }
 simpleSettings.initialize(settingsCallback);
-
-/**
- * Listener for leading zero settings change. 
- */
-messaging.peerSocket.addEventListener("message", (evt) => {
-  if (evt && evt.data && evt.data.key === "leadingzero") {
-    zeroLeadHours = evt.data.value;
-    clock.granularity = "seconds";
-  } else if (evt && evt.data && evt.data.key === "ampm") {
-    showAmPm = evt.data.value;
-    clock.granularity = "seconds";
-  }
-});
 
 /**
  * Sets display elements to current color.
