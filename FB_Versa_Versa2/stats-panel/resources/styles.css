@@ -107,7 +107,7 @@
 
 #stepsIcon {
   x: "166";
-  y: "30";
+  y: "15";
   width: "20";
   height: "25";
   fill: black; 
@@ -116,8 +116,8 @@
 
 #stepCountLabel {
   x: "193";
-  y: "52";
-  font-size: 30;
+  y: "37";
+  font-size: 29;
   font-family: System-Bold;
   text-length: 80;
   text-anchor: start;
@@ -126,7 +126,7 @@
 
 #batteryIcon {
   x: "166";
-  y: "67";
+  y: "59";
   width: "35";
   height: "20";
   fill: black; 
@@ -135,36 +135,17 @@
 
 #batteryLabel {
   x: "209";
-  y: "87";
-  font-size: 30;
+  y: "79";
+  font-size: 29;
   font-family: System-Bold;
   text-length: 80;
   text-anchor: start;
   fill: black
 }
 
-#tempIcon {
-  x: "168";
-  y: "100";
-  width: "15";
-  height: "25";
-  fill: black;
-  opacity: 1; 
-}
-
-#tempLabel {
-  x: "192";
-  y: "123";
-  font-size: 30;
-  font-family: System-Bold;
-  text-length: 128;
-  text-anchor: start;
-  fill: black;
-}
-
 #heartIcon {
-  x: "163";
-  y: "138";
+  x: "165";
+  y: "99";
   width: "22";
   height: "24";
   fill: black;
@@ -172,9 +153,9 @@
 }
 
 #heartRateLabel {
-  x: "192";
-  y: "161";
-  font-size: 30;
+  x: "194";
+  y: "121";
+  font-size: 29;
   font-family: System-Bold;
   text-length: 80;
   text-anchor: start;
@@ -182,16 +163,16 @@
 }
 
 #distanceIcon {
-  x: "167";
-  y: "175";
+  x: "168";
+  y: "142";
   width: "14";
   height: "23" 
 }
 
 #distanceLabel {
-  x: "192";
-  y: "196";
-  font-size: 30;
+  x: "194";
+  y: "163";
+  font-size: 29;
   font-family: System-Bold;
   text-length: 80;
   text-anchor: start;
@@ -200,15 +181,15 @@
 
 #calorieIcon {
   x: "168";
-  y: "210";
+  y: "181";
   width: "14";
   height: "24" 
 }
 
 #calorieLabel {
-  x: "192";
-  y: "233";
-  font-size: 30;
+  x: "194";
+  y: "204";
+  font-size: 29;
   font-family: System-Bold;
   text-length: 80;
   text-anchor: start;
@@ -217,15 +198,15 @@
 
 #activeZoneIcon {
   x: "165";
-  y: "247";
+  y: "223";
   width: "20";
   height: "22";
 }
 
 #activeZoneLabel {
-  x: "192";
-  y: "268";
-  font-size: 30;
+  x: "194";
+  y: "244";
+  font-size: 29;
   font-family: System-Bold;
   text-length: 80;
   text-anchor: start;
@@ -234,15 +215,15 @@
 
 #floorsIcon {
   x: "165";
-  y: "283";
+  y: "264";
   width: "22";
   height: "20" 
 }
 
 #floorsLabel {
   x: "193";
-  y: "303";
-  font-size: 30;
+  y: "284";
+  font-size: 29;
   font-family: System-Bold;
   text-length: 80;
   text-anchor: start;

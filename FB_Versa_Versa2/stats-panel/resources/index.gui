@@ -30,10 +30,10 @@
   <text id="hourLabel" />
   <text id="minuteLabel" />
 
-  <rect x="0" y="186" width="200" height="3" fill="green" id="seperatorbar" />
+  <rect x="0" y="185" width="200" height="3" fill="green" id="seperatorbar" />
 
-  <circle id="amCircle" cx="39-20" cy="206" r="6" fill="black" />
-  <circle id="pmCircle" cx="123+20" cy="206" r="6" fill="black" />
+  <circle id="amCircle" cx="6+15" cy="204" r="6" fill="black" />
+  <circle id="pmCircle" cx="148-15" cy="204" r="6" fill="black" />
 
   <text id="dayOfWeekLabel" />
   <text id="monthLabel" />
