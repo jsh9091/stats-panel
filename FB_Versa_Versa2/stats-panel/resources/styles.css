@@ -36,72 +36,72 @@
 }
 
 #hourLabel {
-  font-size: 90;
+  font-size: 85;
   font-family: FBNucleon-Bold;
   text-length: 100;
   text-anchor: middle;
   x: 76;
-  y: 95;
+  y: 85;
   fill: white
 }
 
 #minuteLabel {
-  font-size: 90;
+  font-size: 85;
   font-family: FBNucleon-Bold;
   text-length: 100;
   text-anchor: middle;
   x: 76;
-  y: 180;
+  y: 165;
   fill: white
 }
 
 #hourShadow {
-  font-size: 90;
+  font-size: 85;
   font-family: FBNucleon-Bold;
   text-length: 100;
   text-anchor: middle;
   x: 80;
-  y: 95+4;
+  y: 85+4;
   fill: green
 }
 
 #minuteShadow {
-  font-size: 90;
+  font-size: 85;
   font-family: FBNucleon-Bold;
   text-length: 100;
   text-anchor: middle;
   x: 80;
-  y: 180+4;
+  y: 165+4;
   fill: green
 }
 
 #dayOfWeekLabel {
-  font-size: 30;
+  font-size: 27;
   font-family: FBNucleon-Medium;
   text-length: 100;
   text-anchor: middle;
   x: 76;
-  y: 235;
+  y: 220;
   fill: white
 }
 
 #monthLabel {
-  font-size: 30;
+  font-size: 27;
   font-family: FBNucleon-Medium;
   text-length: 100;
   text-anchor: middle;
   x: 76;
-  y: 270;
+  y: 250;
   fill: white
 }
 
 #yearLabel {
-  font-size: 30;
+  font-size: 27;
   font-family: FBNucleon-Medium;
   text-length: 100;
   text-anchor: middle;
   x: 76;
-  y: 305;
+  y: 282;
   fill: white
 }
 
