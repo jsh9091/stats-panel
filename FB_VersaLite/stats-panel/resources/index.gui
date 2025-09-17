@@ -1,0 +1,65 @@
+<!--
+  MIT License
+
+  Copyright (c) 2025 Joshua Horvath
+  
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+ 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+ 
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE. -->
+
+<svg>
+  <rect id="background" />
+
+  <text id="hourShadow" />
+  <text id="minuteShadow" />
+
+  <text id="hourLabel" />
+  <text id="minuteLabel" />
+
+  <rect x="0" y="185" width="200" height="3" fill="green" id="seperatorbar" />
+
+  <circle id="amCircle" cx="6+15" cy="204" r="6" fill="black" />
+  <circle id="pmCircle" cx="148-15" cy="204" r="6" fill="black" />
+
+  <text id="dayOfWeekLabel" />
+  <text id="monthLabel" />
+  <text id="yearLabel" />
+
+  <rect x="155" y="0" width="145" height="300" fill="green" id="statuspanel" />
+
+  <image id="stepsIcon" href="steps.png" />
+  <text id="stepCountLabel" />
+
+  <image id="batteryIcon" href="battery-full.png" />
+  <text id="batteryLabel" />
+  
+  <image id="heartIcon" href="heart.png" />
+  <text id="heartRateLabel" />
+
+  <text id="distanceLabel" />
+  <image id="distanceIcon" href="distance.png" />
+
+  <text id="calorieLabel" />
+  <image id="calorieIcon" href="flame.png" />
+
+  <text id="activeZoneLabel" />
+  <image id="activeZoneIcon" href="chevron.png" />
+
+  <text id="floorsLabel" />
+  <image id="floorsIcon" href="floors.png" />
+
+</svg>
