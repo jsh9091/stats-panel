@@ -28,11 +28,9 @@ import { preferences, units } from "user-settings";
 import { today as activity } from "user-activity";
 import { me as appbit } from "appbit";
 import { battery } from "power";
-import * as newfile from "./newfile";
 import { HeartRateSensor } from "heart-rate";
 import { display } from "display";
 import * as simpleSettings from "./simple/device-settings";
-import * as messaging from "messaging";
 
 let color = "green";
 let currentRawHour = 0;
@@ -64,20 +62,27 @@ const statuspanel = document.getElementById("statuspanel");
 const seperatorbar = document.getElementById("seperatorbar");
 
 /**
- * Listener for leading zero settings change. 
+ * Get and process settings changes.
+ * @param {*} data 
+ * @returns 
  */
-messaging.peerSocket.addEventListener("message", (evt) => {
-  if (evt && evt.data && evt.data.key === "leadingzero") {
-    zeroLeadHours = evt.data.value;
-    clock.granularity = "seconds";
-  } else if (evt && evt.data && evt.data.key === "ampm") {
-    showAmPm = evt.data.value;
-    clock.granularity = "seconds";
-  } else if (evt && evt.data && evt.data.key === "color") {
-    color = evt.data.value;
+function settingsCallback(data) {
+  if (!data) {
+    return;
+  }
+
+  if (data.color) {
+    color = data.color;
     setColor();
   }
-});
+
+  // always set boolean data from data
+  zeroLeadHours = data.leadingzero;
+  showAmPm = data.ampm;
+  // enforce update on display quickly
+  clock.granularity = "seconds";
+}
+simpleSettings.initialize(settingsCallback);
 
 /**
  * Sets display elements to current color.
