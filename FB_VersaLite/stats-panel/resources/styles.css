@@ -107,7 +107,7 @@
 
 #stepsIcon {
   x: "166";
-  y: "15";
+  y: "18";
   width: "20";
   height: "25";
   fill: black; 
@@ -116,7 +116,7 @@
 
 #stepCountLabel {
   x: "193";
-  y: "37";
+  y: "40";
   font-size: 29;
   font-family: System-Bold;
   text-length: 80;
@@ -126,7 +126,7 @@
 
 #batteryIcon {
   x: "166";
-  y: "59";
+  y: "69";
   width: "35";
   height: "20";
   fill: black; 
@@ -135,7 +135,7 @@
 
 #batteryLabel {
   x: "209";
-  y: "79";
+  y: "89";
   font-size: 29;
   font-family: System-Bold;
   text-length: 80;
@@ -145,7 +145,7 @@
 
 #heartIcon {
   x: "165";
-  y: "99";
+  y: "115";
   width: "22";
   height: "24";
   fill: black;
@@ -154,7 +154,7 @@
 
 #heartRateLabel {
   x: "194";
-  y: "121";
+  y: "137";
   font-size: 29;
   font-family: System-Bold;
   text-length: 80;
@@ -164,14 +164,14 @@
 
 #distanceIcon {
   x: "168";
-  y: "142";
+  y: "164";
   width: "14";
   height: "23" 
 }
 
 #distanceLabel {
   x: "194";
-  y: "163";
+  y: "185";
   font-size: 29;
   font-family: System-Bold;
   text-length: 80;
@@ -181,14 +181,14 @@
 
 #calorieIcon {
   x: "168";
-  y: "181";
+  y: "210";
   width: "14";
   height: "24" 
 }
 
 #calorieLabel {
   x: "194";
-  y: "204";
+  y: "233";
   font-size: 29;
   font-family: System-Bold;
   text-length: 80;
@@ -198,14 +198,14 @@
 
 #activeZoneIcon {
   x: "165";
-  y: "223";
+  y: "259";
   width: "20";
   height: "22";
 }
 
 #activeZoneLabel {
   x: "194";
-  y: "244";
+  y: "280";
   font-size: 29;
   font-family: System-Bold;
   text-length: 80;
