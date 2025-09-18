@@ -1,5 +1,5 @@
 # Stats Panel
-A Fitbit watch-face displaying several statistic in a panel on the right side of the display. 
+A Fitbit watch-face displaying several statistics in a panel on the right side of the display. 
 
 ![screenshot of watch-face](Screenshot.png)
 
