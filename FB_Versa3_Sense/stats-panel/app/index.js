@@ -78,11 +78,17 @@ function settingsCallback(data) {
     setColor();
   }
 
-  // always set boolean data from data
-  zeroLeadHours = data.leadingzero;
-  showAmPm = data.ampm;
-  // enforce update on display quickly
-  clock.granularity = "seconds";
+  if (data.leadingzero !== undefined && data.leadingzero !== null) {
+    zeroLeadHours = data.leadingzero;
+    // enforce update on display quickly
+    clock.granularity = "seconds";
+  }
+
+  if (data.ampm !== undefined && data.ampm !== null) {
+    showAmPm = data.ampm;
+    // enforce update on display quickly
+    clock.granularity = "seconds";
+  }
 }
 simpleSettings.initialize(settingsCallback);
 
