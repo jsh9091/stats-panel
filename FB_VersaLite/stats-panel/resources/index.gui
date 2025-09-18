@@ -59,7 +59,4 @@
   <text id="activeZoneLabel" />
   <image id="activeZoneIcon" href="chevron.png" />
 
-  <text id="floorsLabel" />
-  <image id="floorsIcon" href="floors.png" />
-
 </svg>

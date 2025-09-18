@@ -57,7 +57,6 @@ const heartRateLabel = document.getElementById("heartRateLabel");
 const distanceLabel = document.getElementById("distanceLabel");
 const calorieLabel = document.getElementById("calorieLabel");
 const activeZoneLabel = document.getElementById("activeZoneLabel");
-const floorsLabel = document.getElementById("floorsLabel");
 const statuspanel = document.getElementById("statuspanel");
 const seperatorbar = document.getElementById("seperatorbar");
 
@@ -216,7 +215,6 @@ function updateExerciseFields() {
     distanceLabel.text = getDistance();
     calorieLabel.text = getCalories().formatted;
     activeZoneLabel.text = activity.adjusted.activeZoneMinutes.total;
-    floorsLabel.text = activity.adjusted.elevationGain;
 
   } else {
     const empty = "----";
