@@ -1,5 +1,5 @@
 # Stats Panel
-A simple Fitbit clockface displaying in two vertical columns. The left column containing time and date information. The right column containing several daily statistics in a panel. Settings are available to change the color displayed, show or hide a leading zero for single digit hours, and to show or hide AM/PM indicators.
+A simple Fitbit clockface displaying in two vertical columns. The left column containing time (12 or 24 hour) and date information. The right column containing several daily statistics in a panel. Settings are available to change the color displayed, show or hide a leading zero for single digit hours, and to show or hide AM/PM indicators.
 
 ![screenshot of watch-face](Screenshot.png)
 
