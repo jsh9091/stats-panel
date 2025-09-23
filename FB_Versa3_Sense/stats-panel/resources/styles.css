@@ -36,7 +36,7 @@
 }
 
 #hourLabel {
-  font-size: 90;
+  font-size: 87;
   font-family: FBNucleon-Bold;
   text-length: 100;
   text-anchor: middle;
@@ -46,32 +46,32 @@
 }
 
 #minuteLabel {
-  font-size: 90;
+  font-size: 87;
   font-family: FBNucleon-Bold;
   text-length: 100;
   text-anchor: middle;
   x: 80;
-  y: 180;
+  y: 175;
   fill: white
 }
 
 #hourShadow {
-  font-size: 90;
+  font-size: 87;
   font-family: FBNucleon-Bold;
   text-length: 100;
   text-anchor: middle;
   x: 84;
-  y: 95+4;
+  y: 95+5;
   fill: green
 }
 
 #minuteShadow {
-  font-size: 90;
+  font-size: 87;
   font-family: FBNucleon-Bold;
   text-length: 100;
   text-anchor: middle;
   x: 84;
-  y: 180+4;
+  y: 175+5;
   fill: green
 }
 
