@@ -36,7 +36,7 @@
 }
 
 #hourLabel {
-  font-size: 90;
+  font-size: 87;
   font-family: FBNucleon-Bold;
   text-length: 100;
   text-anchor: middle;
@@ -46,32 +46,32 @@
 }
 
 #minuteLabel {
-  font-size: 90;
+  font-size: 87;
   font-family: FBNucleon-Bold;
   text-length: 100;
   text-anchor: middle;
   x: 80;
-  y: 180;
+  y: 175;
   fill: white
 }
 
 #hourShadow {
-  font-size: 90;
+  font-size: 87;
   font-family: FBNucleon-Bold;
   text-length: 100;
   text-anchor: middle;
   x: 84;
-  y: 95+4;
+  y: 95+5;
   fill: green
 }
 
 #minuteShadow {
-  font-size: 90;
+  font-size: 87;
   font-family: FBNucleon-Bold;
   text-length: 100;
   text-anchor: middle;
   x: 84;
-  y: 180+4;
+  y: 175+5;
   fill: green
 }
 
@@ -144,7 +144,7 @@
 }
 
 #tempIcon {
-  x: "168";
+  x: "167";
   y: "100";
   width: "15";
   height: "25";
@@ -185,7 +185,9 @@
   x: "167";
   y: "175";
   width: "14";
-  height: "23" 
+  height: "23";
+  fill: black;
+  opacity: 1; 
 }
 
 #distanceLabel {
@@ -202,7 +204,9 @@
   x: "168";
   y: "210";
   width: "14";
-  height: "24" 
+  height: "24";
+  fill: black;
+  opacity: 1;  
 }
 
 #calorieLabel {
@@ -216,10 +220,12 @@
 }
 
 #activeZoneIcon {
-  x: "165";
+  x: "168";
   y: "247";
-  width: "20";
+  width: "14";
   height: "22";
+  fill: black;
+  opacity: 1; 
 }
 
 #activeZoneLabel {
@@ -236,7 +242,9 @@
   x: "165";
   y: "283";
   width: "22";
-  height: "20" 
+  height: "20";
+  fill: black;
+  opacity: 1; 
 }
 
 #floorsLabel {
