@@ -41,7 +41,7 @@
   text-length: 100;
   text-anchor: middle;
   x: 76;
-  y: 85;
+  y: 82;
   fill: white
 }
 
@@ -51,7 +51,7 @@
   text-length: 100;
   text-anchor: middle;
   x: 76;
-  y: 165;
+  y: 163;
   fill: white
 }
 
@@ -61,7 +61,7 @@
   text-length: 100;
   text-anchor: middle;
   x: 80;
-  y: 85+3;
+  y: 82+4;
   fill: green
 }
 
@@ -71,7 +71,7 @@
   text-length: 100;
   text-anchor: middle;
   x: 80;
-  y: 165+3;
+  y: 163+4;
   fill: green
 }
 
@@ -166,7 +166,9 @@
   x: "168";
   y: "142";
   width: "14";
-  height: "23" 
+  height: "23";
+  fill: black; 
+  opacity: 1;
 }
 
 #distanceLabel {
@@ -183,7 +185,9 @@
   x: "168";
   y: "181";
   width: "14";
-  height: "24" 
+  height: "24";
+  fill: black; 
+  opacity: 1;
 }
 
 #calorieLabel {
@@ -219,7 +223,9 @@
   x: "165";
   y: "264";
   width: "22";
-  height: "20" 
+  height: "20";
+  fill: black; 
+  opacity: 1; 
 }
 
 #floorsLabel {
