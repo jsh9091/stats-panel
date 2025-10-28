@@ -25,7 +25,7 @@ Settings panel for watch-face in Fitbit phone app:
 ![settings panel in Fitbit phone app](Settings%20Panel.png)
 
 General Troubleshooting: 
-- If question mark appears next to heart rate icon. This happens if the watchface does not receive a value for heart rate. This can happen when the watchface is first loaded after installation. If the question mark appears after installation, wait a few moments and the heart rate value should appear.
+- A question mark appears next to heart rate icon. This happens if the watchface does not receive a value for heart rate. This can happen when the watchface is first loaded after installation. If the question mark appears after installation, wait a few moments and the heart rate value should appear.
 - If the settings values in the Fitbit phone app become out of sync with the actual display of the watchface, try toggeling the out of sync values on the phone a couple times to resolve the issue.
 
 Troubleshooting: If the temperature does not show up: 
